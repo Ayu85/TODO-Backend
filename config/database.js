@@ -6,6 +6,7 @@ const connectDB = () => {
         console.log("****Boom...DB Connected****");
     }).catch((err) => {
         console.log("Oopss...DB Connrction Failed : ", err);
+        process.exit(1) // to exit from all the exceptions
     })
 }
 module.exports = connectDB
