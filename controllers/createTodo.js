@@ -1,1 +1,1 @@
-const 
+const Todo=require('../models/todo') //importing the model to create todo controller
