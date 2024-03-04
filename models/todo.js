@@ -1,6 +1,6 @@
 // const moongoose = require('mongoose')
 import mongoose from "mongoose"
-const { Schema } = mongoose
+const { Schema, Model } = mongoose
 const todo = new Schema({
     title: {
         type: String,
@@ -16,3 +16,5 @@ const todo = new Schema({
         default: Date.now()
     }
 })
+const model = new Model("ToDo", todo)
+module.exports = model
