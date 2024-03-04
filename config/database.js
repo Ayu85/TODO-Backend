@@ -8,4 +8,4 @@ const connectDB = () => {
         console.log("Oopss...DB Connrction Failed : ", err);
     })
 }
-connectDB()
+module.exports = connectDB
