@@ -9,7 +9,7 @@ const createTodo = async (req, res) => {
         //send a success code with response tom user
         res.status(200).json({
             success: true,
-            data: response,
+            data: todoData,
             message: "Task created successfully"
         })
     }
