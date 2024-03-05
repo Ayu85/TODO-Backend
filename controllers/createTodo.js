@@ -1,13 +1,12 @@
-const { response } = require('express');
 const Todo = require('../models/todo') //importing the model to create todo controller
-const createTodo = async (req, res) => {
+const createTodo = async (request, response) => {
     try {
         //extract the data from request body (the data entered by user on the ui)
-        const { title, description } = req.body;
+        const { title, description } = request.body;
         //creating a new todo object and insert intro the mongo db database 
         const todoData = await Todo.create({ title, description });
         //send a success code with response tom user
-        res.status(200).json({
+        response.status(200).json({
             success: true,
             data: todoData,
             message: "Task created successfully"

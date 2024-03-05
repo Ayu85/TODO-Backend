@@ -1,4 +1,4 @@
-//this file will contain the code for database / mongodb connection with the server
+//this file will contain the connection code for database / mongodb  with the server
 const mongoose = require('mongoose')
 require('dotenv').config()
 const connectDB = () => {
